@@ -12,8 +12,11 @@
 .flex-container {
   display: flex;
   border: 4px solid blue;
+
 }
 
 /* Plaats je oplossing hieronder */
-
-
+.flex-container {
+  justify-content: center;
+  
+}

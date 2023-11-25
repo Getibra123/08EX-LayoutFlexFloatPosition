@@ -7,6 +7,13 @@ nav {
 }
 nav ul {
   border: 1px solid #000;
+  
+  /* De property list-style wordt normaal ingesteld op de li-elementen,
+  maar omdat deze property overgeërfd wordt, kan ze ook ingesteld 
+  worden op het ul parent element. */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 nav a {
   text-decoration: none;
@@ -18,4 +25,52 @@ nav a {
   display: block;
   padding: 10px;
   margin: 10px;
+}
+
+/* Space distributed outside the items */
+/* *********************************** */
+#nav1 ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Space distributed within the items */
+/* ********************************** */
+#nav2 ul {
+  display: flex;
+}
+#nav2 li {
+  flex: auto; /* flex: 1 1 auto */
+  /*
+  In Flexbox staat flex: auto; voor een shorthand eigenschap waarmee je de volgende drie eigenschappen instelt:
+
+flex-grow
+flex-shrink
+flex-basis
+De waarden die niet expliciet worden opgegeven, worden standaard ingesteld op:
+
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 0%;
+Dit betekent dat het flex-item zal groeien en krimpen om beschikbare ruimte in te nemen, maar het zal beginnen met een initiële grootte van nul.
+Dit is handig als je wilt dat het item zich aanpast aan de beschikbare ruimte, maar ook kan groeien als er extra ruimte is.
+  */
+}
+
+/* Space distributed within the items, equal width items */
+/* ***************************************************** */
+#nav3 ul {
+  display: flex;
+}
+#nav3 li {
+  flex: 1; /* flex: 1 1 0; */
+}
+
+/* Split navigation */
+/* **************** */
+#nav4 ul {
+  display: flex;
+}
+.push-right {
+  margin-left: auto;
 }

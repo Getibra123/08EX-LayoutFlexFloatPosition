@@ -10,5 +10,18 @@
 }
 
 /* Plaats je oplossing hieronder */
+.flex-container {
+  display: flex;
+}
 
-
+.flex-container > div
+   {
+    flex-grow: 1; /* of 'flex: 1 1 auto' of 'flex:auto' */
+    /*
+  In CSS staat flex-grow voor de groeifactor van een flex-item binnen een flex-container. Het bepaalt hoeveel ruimte een flex-item 
+  moet innemen binnen de flex-container in verhouding tot de andere flex-items.
+  Wanneer je flex-grow: 1; toepast op een flex-item, geef je aan dat het item de beschikbare ruimte moet innemen en groeien ten opzichte van
+  andere flex-items binnen dezelfde flex-container. Als alle flex-items dezelfde groeifactor hebben van 1, zullen ze allemaal evenveel ruimte 
+  delen binnen de flex-container en groeien of krimpen op basis van de beschikbare ruimte.
+  */
+  }
